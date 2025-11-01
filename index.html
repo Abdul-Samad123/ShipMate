@@ -30,7 +30,186 @@
             margin: 0 auto;
             padding: 0 20px;
         }
+                /* About Section */
+                .about {
+            padding: 100px 0;
+            background: var(--white);
+        }
         
+        .about-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .about-subtitle {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        
+        .about-description {
+            margin-bottom: 3rem;
+        }
+        
+        .about-description p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .mission-card, .vision-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .mission-icon, .vision-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .mission-card h3, .vision-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .values h3 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        
+        .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.value-item {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    background: var(--light);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.value-item h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.value-item p {
+    line-height: 1.6;
+    color: var(--secondary);
+}
+        
+        .about-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .stat-card {
+            background: var(--primary);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .team-section {
+            text-align: center;
+            padding-top: 4rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .team-section h3 {
+            color: var(--primary);
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-item {
+            padding: 2rem;
+            background: var(--light);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-item h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-stats {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            .stat-card {
+                flex: 1;
+                min-width: 150px;
+            }
+        }
         /* Professional Header */
              /* Enhanced Professional Navbar */
              header {
@@ -48,6 +227,181 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+                /* Tracking Section */
+                .tracking {
+            padding: 100px 0;
+            background: var(--light);
+        }
+        
+        .tracking-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .tracking-input-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+        
+        .tracking-form {
+            text-align: center;
+        }
+        
+        .tracking-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tracking-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        
+        .track-btn {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+        }
+        
+        .tracking-results {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            min-height: 300px;
+        }
+        
+        .results-placeholder {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .placeholder-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+        
+        .live-results {
+            display: block;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .shipment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .status-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .status-badge.delivered {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+        
+        .status-badge.transit {
+            background: #bee3f8;
+            color: #1a365d;
+        }
+        
+        .progress-tracker {
+            margin-bottom: 2rem;
+        }
+        
+        .progress-step {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            position: relative;
+        }
+        
+        .progress-step::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0;
+            z-index: 1;
+        }
+        
+        .progress-step:first-child::before {
+            top: 50%;
+        }
+        
+        .progress-step:last-child::before {
+            bottom: 50%;
+        }
+        
+        .step-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            z-index: 2;
+            font-weight: bold;
+        }
+        
+        .progress-step.completed .step-icon {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .progress-step.active .step-icon {
+            background: var(--accent);
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        
+        .step-label {
+            font-weight: 600;
+            flex: 1;
+        }
+        
+        .step-time {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        .shipment-details {
+            background: #f7fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .detail-item {
+            margin-bottom: 0.5rem;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
         
         .logo {
@@ -464,7 +818,7 @@
             
             <nav class="main-nav">
                 <a href="#services" class="nav-link">Services</a>
-                <a href="#solutions" class="nav-link">Solutions</a>
+                <a href="#about" class="nav-link">Solutions</a>
                 <a href="#tracking" class="nav-link">Tracking</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -490,7 +844,7 @@
             <p>Professional courier and logistics solutions for businesses and individuals worldwide. Fast, reliable, and tailored to your needs.</p>
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">Get Started Today</a>
-                <a href="#solutions" class="btn btn-secondary">Business Solutions</a>
+                <a href="#contact" class="btn btn-secondary">Business Solutions</a>
             </div>
         </div>
     </section>
@@ -517,7 +871,191 @@
             </div>
         </div>
     </section>
-
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">About ShipMates</h2>
+                        <p class="about-subtitle">Delivering Excellence in Logistics Since 2018</p>
+                        
+                        <div class="about-description">
+                            <p>ShipMates was founded with a simple mission: to make logistics seamless, reliable, and accessible for businesses and individuals alike. What started as a local courier service has grown into a comprehensive logistics partner serving clients across the globe.</p>
+                            
+                            <p>We understand that in today's fast-paced world, efficient delivery isn't just a service—it's a crucial component of your business success and personal convenience.</p>
+                        </div>
+                        
+                        <div class="mission-vision">
+                            <div class="mission-card">
+                                <div class="mission-icon">🎯</div>
+                                <h3>Our Mission</h3>
+                                <p>To provide reliable, innovative, and sustainable logistics solutions that connect businesses and communities worldwide.</p>
+                            </div>
+                            
+                            <div class="vision-card">
+                                <div class="vision-icon">🔭</div>
+                                <h3>Our Vision</h3>
+                                <p>To be the most trusted logistics partner globally, known for exceptional service and cutting-edge technology.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="values">
+                            <h3>Our Values</h3>
+                            <div class="values-grid">
+                                <div class="value-item">
+                                    <div class="value-icon">⚡</div>
+                                    <h4>Reliability</h4>
+                                    <p>Consistent, on-time delivery you can count on for your most important shipments.</p>
+                                </div>
+                                
+                                <div class="value-item">
+                                    <div class="value-icon">💡</div>
+                                    <h4>Innovation</h4>
+                                    <p>Leveraging technology to create smarter, more efficient logistics solutions.</p>
+                                </div>
+                                
+                                <div class="value-item">
+                                    <div class="value-icon">🤝</div>
+                                    <h4>Partnership</h4>
+                                    <p>Working closely with our clients to understand and exceed their unique needs.</p>
+                                </div>
+                                
+                                <div class="value-item">
+                                    <div class="value-icon">🌱</div>
+                                    <h4>Sustainability</h4>
+                                    <p>Committed to eco-friendly practices and reducing our environmental footprint.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">6+</div>
+                            <div class="stat-label">Years of Excellence</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Successful Deliveries</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Countries Served</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">On-Time Delivery Rate</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-section">
+                    <h3>Why Choose ShipMates?</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">🔒</div>
+                            <h4>Secure Handling</h4>
+                            <p>Advanced tracking and secure protocols for your valuable shipments.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">🌍</div>
+                            <h4>Global Network</h4>
+                            <p>Extensive international partnerships for seamless cross-border shipping.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">📱</div>
+                            <h4>Digital First</h4>
+                            <p>User-friendly platform with real-time updates and 24/7 support.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <h4>Custom Solutions</h4>
+                            <p>Tailored logistics strategies for businesses of all sizes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Tracking Section -->
+    <section class="tracking" id="tracking">
+        <div class="container">
+            <h2 class="section-title">Track Your Shipment</h2>
+            <p class="section-subtitle">Enter your tracking number to get real-time updates on your package</p>
+            
+            <div class="tracking-container">
+                <div class="tracking-input-card">
+                    <div class="tracking-form">
+                        <div class="form-group">
+                            <label for="tracking-number">Tracking Number</label>
+                            <input type="text" id="tracking-number" placeholder="Enter tracking number (e.g. SM12345678)" class="tracking-input">
+                        </div>
+                        <button class="btn btn-primary track-btn">Track Package</button>
+                    </div>
+                </div>
+                
+                <div class="tracking-results">
+                    <div class="results-placeholder">
+                        <div class="placeholder-icon">📦</div>
+                        <h3>Enter your tracking number above</h3>
+                        <p>We'll show you the current status, location, and estimated delivery time of your shipment.</p>
+                    </div>
+                    
+                    <div class="live-results hidden">
+                        <div class="shipment-header">
+                            <h3>Shipment #<span class="tracking-id">SM12345678</span></h3>
+                            <div class="status-badge delivered">In Transit</div>
+                        </div>
+                        
+                        <div class="progress-tracker">
+                            <div class="progress-step completed">
+                                <div class="step-icon">✓</div>
+                                <div class="step-label">Order Received</div>
+                                <div class="step-time">Nov 28, 9:30 AM</div>
+                            </div>
+                            <div class="progress-step completed">
+                                <div class="step-icon">✓</div>
+                                <div class="step-label">Picked Up</div>
+                                <div class="step-time">Nov 28, 2:15 PM</div>
+                            </div>
+                            <div class="progress-step active">
+                                <div class="step-icon">🚚</div>
+                                <div class="step-label">In Transit</div>
+                                <div class="step-time">Expected: Nov 29, 3:00 PM</div>
+                            </div>
+                            <div class="progress-step">
+                                <div class="step-icon">⋅</div>
+                                <div class="step-label">Out for Delivery</div>
+                                <div class="step-time">Pending</div>
+                            </div>
+                            <div class="progress-step">
+                                <div class="step-icon">⋅</div>
+                                <div class="step-label">Delivered</div>
+                                <div class="step-time">Pending</div>
+                            </div>
+                        </div>
+                        
+                        <div class="shipment-details">
+                            <div class="detail-item">
+                                <strong>Origin:</strong> Manila, Philippines
+                            </div>
+                            <div class="detail-item">
+                                <strong>Destination:</strong> Cebu, Philippines
+                            </div>
+                            <div class="detail-item">
+                                <strong>Estimated Delivery:</strong> Nov 29, 2024 by 3:00 PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
@@ -657,8 +1195,56 @@
         s1.setAttribute('crossorigin','*');
         s0.parentNode.insertBefore(s1,s0);
         })();
+            // Tracking Page Functionality
+    document.querySelector('.track-btn').addEventListener('click', function() {
+        const trackingInput = document.querySelector('#tracking-number');
+        const resultsPlaceholder = document.querySelector('.results-placeholder');
+        const liveResults = document.querySelector('.live-results');
+        
+        if (trackingInput.value.trim() === '') {
+            alert('Please enter a tracking number');
+            return;
+        }
+        
+        // Show loading state
+        this.textContent = 'Tracking...';
+        this.disabled = true;
+        
+        // Simulate API call delay
+        setTimeout(() => {
+            // Show results
+            resultsPlaceholder.classList.add('hidden');
+            liveResults.classList.remove('hidden');
+            
+            // Update tracking ID in results
+            document.querySelector('.tracking-id').textContent = trackingInput.value;
+            
+            // Reset button
+            this.textContent = 'Track Package';
+            this.disabled = false;
+        }, 1500);
+    });
+    
+    // Allow Enter key to trigger tracking
+    document.querySelector('#tracking-number').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            document.querySelector('.track-btn').click();
+        }
+    });
         </script>
-        <script>
+<script>
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+<script>
     // Smooth Scroll Navigation Fix
     document.addEventListener('DOMContentLoaded', function() {
         // Fix navigation links
@@ -729,6 +1315,7 @@
             });
         }
     });
-</script>
+</script>     
+
 </body>
 </html>
