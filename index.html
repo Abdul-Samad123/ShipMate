@@ -658,5 +658,77 @@
         s0.parentNode.insertBefore(s1,s0);
         })();
         </script>
+        <script>
+    // Smooth Scroll Navigation Fix
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fix navigation links
+        const navLinks = document.querySelectorAll('a[href^="#"]');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Calculate position accounting for fixed header
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL without page jump
+                    history.pushState(null, null, targetId);
+                }
+            });
+        });
+        
+        // Make "Get Started Today" and "Business Solutions" buttons work
+        const heroButtons = document.querySelectorAll('.hero .btn');
+        heroButtons.forEach(button => {
+            if (button.getAttribute('href') === '#contact') {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const contactSection = document.querySelector('#contact');
+                    if (contactSection) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = contactSection.offsetTop - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        history.pushState(null, null, '#contact');
+                    }
+                });
+            }
+        });
+        
+        // Make CTA button in stats section work
+        const ctaButton = document.querySelector('.cta-section .btn');
+        if (ctaButton) {
+            ctaButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                const contactSection = document.querySelector('#contact');
+                if (contactSection) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = contactSection.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    history.pushState(null, null, '#contact');
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>
